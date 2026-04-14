@@ -1,3 +1,6 @@
+import java.util.List;
+
+
 class User {
     String name;
     int point;
@@ -9,9 +12,18 @@ class User {
     }
 }
 
+class UserService {
+    List<User> users;
+    UserService(List<User> users) {
+        this.users = users;
+    }
 
+
+}
 
 public class App {
+
+    
 
     public static void main(String[] args) throws Exception {
         User user = new User("hiroaki", 90, 24);
@@ -19,7 +31,5 @@ public class App {
         System.out.println(user.name);
         System.out.println(user.age);
         System.out.println(user.point);
-
-
     }
 }
