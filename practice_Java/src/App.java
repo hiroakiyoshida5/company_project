@@ -1,4 +1,8 @@
 import java.util.List;
+
+import model.User;
+import service.UserService;
+
 import java.util.ArrayList;
 
 
@@ -14,13 +18,14 @@ public class App {
 
         return users;
     }
-
     public static void main(String[] args) throws Exception {
         List<User> users = createUser();
         UserService service = new UserService(users);
-        System.out.println("service " + service);
-        System.out.println(service.getAverageAge());
-        System.out.println(service.getTotalPoint());
-        System.out.println(service.findByName("hiroaki"));
+        System.out.println(service.getUsers());
+        System.out.println("addします。");
+        service.getUsers().add(new User("hogetaro", 50, 90));
+        System.out.println(service.getUsers());
+        System.out.println("service.usersの要素数"+service.getUsers().size());
+
     }
 }

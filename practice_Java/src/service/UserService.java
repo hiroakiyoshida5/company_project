@@ -1,10 +1,17 @@
+package service;
 import java.util.List;
 
-public class UserService {
-    List<User> users;
+import model.User;
 
-    UserService(List<User> users) {
+public class UserService {
+    private List<User> users;
+
+    public UserService(List<User> users) {
         this.users = users;
+    }
+
+    public List<User> getUsers (){
+        return users;
     }
 
     public double getAverageAge() {
