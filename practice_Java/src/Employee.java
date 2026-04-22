@@ -4,4 +4,8 @@ public class Employee {
     Employee(String name) {
         this.name = name;
     }
+
+    public void show() {
+        System.out.println("表示");
+    }
 }
